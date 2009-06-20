@@ -1,0 +1,161 @@
+/*
+ *	Title: Screen CSS Styles for fsandassociates.com
+ *	Date: June 20, 2009
+ *  Author: Taylan Pince (taylanpince at gmail dot com)
+ */
+
+
+/* @group Global */
+
+body {
+    text-align: center;
+    background-color: #FFF;
+    font: 13px/18px Georgia, Times New Roman, serif;
+    color: #47225e;
+}
+
+a,
+a:link,
+a:visited,
+a:active {
+    color: #47225e;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #7d5595;
+    text-decoration: none;
+}
+
+p {
+    margin: 0px 0px 15px 0px;
+}
+
+ul li {
+    margin: 0px 0px 6px 15px;
+    list-style-type: disc;
+}
+
+ul.spaced li {
+    margin-bottom: 10px;
+}
+
+/* @end */
+
+
+/* @group Layout */
+
+#Container {
+    text-align: left;
+    width: 720px;
+    margin: 30px auto 15px auto;
+}
+
+#Header {
+    
+}
+
+#Navigation {
+    overflow: hidden;
+    position: static;
+    width: 684px;
+    padding: 35px 18px 0px 18px;
+    border-bottom: 15px solid #47225e;
+}
+
+#Content {
+    padding: 25px;
+    background: transparent url("../images/bg-content.png") top left repeat;
+}
+
+/* @end */
+
+
+/* @group Header */
+
+#Logo {
+    display: block;
+    padding: 0px 25px 30px 0px;
+    text-align: right;
+}
+
+#PhotoBrowser {
+    overflow: hidden;
+    position: static;
+    width: 720px;
+    padding: 13px 0px 11px 0px;
+    background: transparent url("../images/bg-dots.png") top left repeat;
+}
+
+#PhotoBrowser li {
+    float: left;
+    display: inline;
+    margin: 0px;
+}
+
+/* @end */
+
+
+/* @group Navigation */
+
+#Navigation li {
+    float: left;
+    display: inline;
+    margin: 0px 16px 0px 0px;
+}
+
+#Navigation li a {
+    display: block;
+    color: #47225e;
+    text-decoration: none;
+    border-bottom: 8px solid #47225e;
+    margin: 0px 0px 13px 0px;
+}
+
+#Navigation li a.active {
+    margin-bottom: 0px;
+    margin-top: 13px;
+}
+
+#Navigation li a.services {
+    color: #92278f;
+    border-bottom-color: #92278f;
+}
+
+body.services #Navigation {
+    border-bottom-color: #92278f;
+}
+
+#Navigation li a.events {
+    color: #662d91;
+    border-bottom-color: #662d91;
+}
+
+body.events #Navigation {
+    border-bottom-color: #662d91;
+}
+
+#Navigation li a.portfolio {
+    color: #7d5595;
+    border-bottom-color: #7d5595;
+}
+
+body.portfolio #Navigation {
+    border-bottom-color: #7d5595;
+}
+
+#Navigation li a.contact {
+    color: #a585ad;
+    border-bottom-color: #a585ad;
+}
+
+body.contact #Navigation {
+    border-bottom-color: #a585ad;
+}
+
+#Navigation li a:hover {
+    color: #333;
+    border-bottom-color: #333;
+}
+
+/* @end */
