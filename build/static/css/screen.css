@@ -80,17 +80,30 @@ ul.spaced li {
 }
 
 #PhotoBrowser {
+    position: relative;
     overflow: hidden;
-    position: static;
     width: 720px;
-    padding: 13px 0px 11px 0px;
+    height: 125px;
+    padding: 13px 0px 9px 0px;
     background: transparent url("../images/bg-dots.png") top left repeat;
+}
+
+#PhotoBrowser ul {
+    position: absolute;
+    width: 720px;
+    height: 120px;
+    top: 13px;
+    left: 0px;
 }
 
 #PhotoBrowser li {
     float: left;
     display: inline;
     margin: 0px;
+    width: 180px;
+    height: 120px;
+    background-color: #000;
+    text-align: center;
 }
 
 /* @end */

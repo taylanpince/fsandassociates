@@ -11,10 +11,12 @@
 	<style type="text/css">
         @import "css/reset.css";
 	    @import "css/screen.css";
+	    @import "css/lightbox.css";
 	</style>
 	
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/fsandassociates.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/lightbox.js"></script>
+	<script type="text/javascript" src="js/scrolling-gallery.js"></script>
 	
 </head>
 
@@ -25,12 +27,22 @@
         <div id="Header">
             <a href="/" id="Logo"><img src="images/logo.png" alt="Francine Socket &amp; Associates" /></a>
             
-            <ul id="PhotoBrowser">
-                <li><a href="images/photos/1.jpg" target="_blank"><img src="images/photos/1.th.jpg" alt="" /></a></li>
-                <li><a href="images/photos/2.jpg" target="_blank"><img src="images/photos/2.th.jpg" alt="" /></a></li>
-                <li><a href="images/photos/3.jpg" target="_blank"><img src="images/photos/3.th.jpg" alt="" /></a></li>
-                <li><a href="images/photos/4.jpg" target="_blank"><img src="images/photos/4.th.jpg" alt="" /></a></li>
-            </ul>
+            <div id="PhotoBrowser">
+                <ul>
+                    <li><a href="images/photos/1.jpg" target="_blank"><img src="images/photos/1.th.jpg" alt="" /></a></li>
+                    <li><a href="images/photos/2.jpg" target="_blank"><img src="images/photos/2.th.jpg" alt="" /></a></li>
+                    <li><a href="images/photos/3.jpg" target="_blank"><img src="images/photos/3.th.jpg" alt="" /></a></li>
+                    <li><a href="images/photos/4.jpg" target="_blank"><img src="images/photos/4.th.jpg" alt="" /></a></li>
+                </ul>
+            </div>
+            
+            <script type="text/javascript">
+            //<![CDATA[
+            <!--
+            new core.ScrollingGallery("#PhotoBrowser", 40, "images/photos/");
+            //-->
+            //]]>
+            </script>
         </div>
         
         <ul id="Navigation">
