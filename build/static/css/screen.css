@@ -40,6 +40,12 @@ ul.spaced li {
     margin-bottom: 10px;
 }
 
+h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px 0px 15px 0px;
+}
+
 /* @end */
 
 
@@ -79,10 +85,6 @@ ul.spaced li {
 
 
 /* @group Header */
-
-#Logo {
-    margin: 0px 0px 10px 0px;
-}
 
 #PhotoBrowser {
     position: relative;
