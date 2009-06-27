@@ -46,6 +46,12 @@ h1 {
     margin: 0px 0px 15px 0px;
 }
 
+img.right {
+    float: right;
+    display: inline;
+    margin: 0px 0px 10px 10px;
+}
+
 /* @end */
 
 
@@ -68,10 +74,6 @@ h1 {
     width: 684px;
     padding: 35px 18px 0px 18px;
     margin: 0px auto 0px auto;
-}
-
-#ContentContainer {
-    
 }
 
 #Content {
