@@ -1,0 +1,26 @@
+/*
+ *	Title: Screen CSS Styles for fsandassociates.com
+ *	Date: July 6, 2009
+ *  Author: Taylan Pince (taylanpince at gmail dot com)
+ */
+
+
+/* @group Global */
+
+body {
+    text-align: center;
+    font: 13px/18px Georgia, Times New Roman, serif;
+}
+
+#Container {
+    width: 225px;
+    margin: 100px auto 0px auto;
+}
+
+h2 {
+    margin: 20px 0px 0px 0px;
+    font-size: 21px;
+    color: #7d5595;
+}
+
+/* @end */
