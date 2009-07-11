@@ -10,8 +10,8 @@
 body {
     text-align: center;
     font: 13px/18px Georgia, Times New Roman, serif;
-    color: #47225e;
-    background: #FFF url("../images/bg-content.png") top left repeat;
+    color: #000;
+    background: #d0cfcf url("../images/bg-content.png") top left repeat;
 }
 
 a,
@@ -41,7 +41,7 @@ ul.spaced li {
 }
 
 h1 {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
     margin: 0px 0px 15px 0px;
 }
@@ -59,12 +59,12 @@ img.right {
 
 #Header {
     text-align: center;
-    background-color: #FFF;
+    background-color: #d0cfcf;
     padding: 15px 0px 0px 0px;
 }
 
 #NavigationContainer {
-    background-color: #FFF;
+    background-color: #d0cfcf;
     border-bottom: 15px solid #47225e;
 }
 
@@ -119,6 +119,27 @@ img.right {
 /* @end */
 
 
+/* @group Gallery */
+
+ul.photos {
+    overflow: hidden;
+    position: static;
+    width: 670px;
+}
+
+ul.photos li {
+    float: left;
+    display: inline;
+    width: 180px;
+    height: 120px;
+    list-style: none;
+    padding: 0px;
+    margin: 0px 10px 10px 0px;
+}
+
+/* @end */
+
+
 /* @group Navigation */
 
 #Navigation li {
@@ -129,7 +150,9 @@ img.right {
 
 #Navigation li a {
     display: block;
-    color: #47225e;
+    /*color: #47225e;*/
+    color: #000;
+    font-size: 14px;
     text-decoration: none;
     border-bottom: 8px solid #47225e;
     margin: 0px 0px 13px 0px;
@@ -141,7 +164,7 @@ img.right {
 }
 
 #Navigation li a.services {
-    color: #92278f;
+    /*color: #92278f;*/
     border-bottom-color: #92278f;
 }
 
@@ -150,7 +173,7 @@ body.services #NavigationContainer {
 }
 
 #Navigation li a.events {
-    color: #662d91;
+    /*color: #662d91;*/
     border-bottom-color: #662d91;
 }
 
@@ -159,7 +182,7 @@ body.events #NavigationContainer {
 }
 
 #Navigation li a.portfolio {
-    color: #7d5595;
+    /*color: #7d5595;*/
     border-bottom-color: #7d5595;
 }
 
@@ -168,7 +191,7 @@ body.portfolio #NavigationContainer {
 }
 
 #Navigation li a.contact {
-    color: #a585ad;
+    /*color: #a585ad;*/
     border-bottom-color: #a585ad;
 }
 
@@ -177,7 +200,8 @@ body.contact #NavigationContainer {
 }
 
 #Navigation li a:hover {
-    color: #dfb4ea;
+    /*color: #dfb4ea;*/
+    color: #666;
     border-bottom-color: #dfb4ea;
 }
 
