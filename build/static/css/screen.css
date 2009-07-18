@@ -9,7 +9,7 @@
 
 body {
     text-align: center;
-    font: 13px/18px Georgia, Times New Roman, serif;
+    font: 15px/18px Georgia, Times New Roman, serif;
     color: #000;
     background: #d0cfcf url("../images/bg-content.png") top left repeat;
 }
@@ -49,7 +49,7 @@ h1 {
 img.right {
     float: right;
     display: inline;
-    margin: 0px 0px 10px 10px;
+    margin: 0px 0px 10px 15px;
 }
 
 /* @end */
@@ -156,7 +156,7 @@ ul.photos li {
     display: block;
     /*color: #47225e;*/
     color: #000;
-    font-size: 14px;
+    font-size: 16px;
     text-decoration: none;
     border-bottom: 8px solid #47225e;
     margin: 0px 0px 13px 0px;
