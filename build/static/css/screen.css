@@ -168,14 +168,18 @@ ul.photos li {
 #Navigation li {
     float: left;
     display: inline;
-    margin: 0px 16px 0px 0px;
+    margin: 0px 45px 0px 0px;
+}
+
+#Navigation li.last-child {
+    margin-right: 0px;
 }
 
 #Navigation li a {
     display: block;
     /*color: #47225e;*/
     color: #000;
-    font-size: 16px;
+    font-size: 18px;
     text-decoration: none;
     border-bottom: 8px solid #47225e;
     margin: 0px 0px 13px 0px;
