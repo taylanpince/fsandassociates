@@ -39,7 +39,7 @@ core.Gallery = $.Class.extend({
     init : function(selector) {
         this.selector = selector;
 
-        $(this.selector).find("a").lightBox();
+        // $(this.selector).find("a").lightBox();
         
         this.begin_scroll();
     }
