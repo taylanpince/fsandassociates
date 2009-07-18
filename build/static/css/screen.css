@@ -46,10 +46,29 @@ h1 {
     margin: 0px 0px 15px 0px;
 }
 
-img.right {
+div.right {
     float: right;
     display: inline;
-    margin: 0px 0px 10px 15px;
+    margin: 0px 0px 10px 35px;
+    width: 150px;
+}
+
+div.right img {
+    margin-bottom: 10px;
+}
+
+blockquote {
+    margin-bottom: 10px;
+}
+
+blockquote p {
+    margin: 0px;
+}
+
+blockquote p.source {
+    font-size: 13px;
+    text-align: right;
+    font-style: italic;
 }
 
 /* @end */
