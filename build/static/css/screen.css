@@ -80,6 +80,24 @@ img.right {
     margin: 0px 0px 10px 15px;
 }
 
+div.columns {
+    width: 495px;
+    overflow: hidden;
+    position: static;
+}
+
+div.columns ul {
+    float: left;
+    display: inline;
+    width: 238px;
+    margin: 0px 15px 0px 0px;
+    padding: 0px 0px 0px 2px;
+}
+
+div.columns ul.no-margin {
+    margin: 0px;
+}
+
 /* @end */
 
 
