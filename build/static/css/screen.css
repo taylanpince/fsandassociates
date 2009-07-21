@@ -199,7 +199,7 @@ ul.photos li {
 #Navigation li {
     float: left;
     display: inline;
-    margin: 0px 40px 0px 0px;
+    margin: 0px 36px 0px 0px;
 }
 
 #Navigation li.last-child {
