@@ -37,6 +37,10 @@ ul li {
     list-style-type: disc;
 }
 
+ul li.no-dot {
+    list-style: none;
+}
+
 ul.spaced li {
     margin-bottom: 10px;
 }
@@ -195,7 +199,7 @@ ul.photos li {
 #Navigation li {
     float: left;
     display: inline;
-    margin: 0px 45px 0px 0px;
+    margin: 0px 40px 0px 0px;
 }
 
 #Navigation li.last-child {
@@ -208,13 +212,12 @@ ul.photos li {
     color: #000;
     font-size: 18px;
     text-decoration: none;
-    border-bottom: 8px solid #47225e;
-    margin: 0px 0px 13px 0px;
+    /*border-bottom: 8px solid #47225e;*/
+    margin: 0px 0px 5px 0px;
 }
 
 #Navigation li a.active {
-    margin-bottom: 0px;
-    margin-top: 13px;
+    color: #666;
 }
 
 #Navigation li a.services {
