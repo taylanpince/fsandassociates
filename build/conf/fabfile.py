@@ -2,14 +2,7 @@ def production():
     "Set the variables for the production environment"
     set(fab_hosts=["67.23.4.212"])
     set(fab_user="taylan")
-    set(remote_dir="/home/taylan/sites/fsandassociates/live")
-
-
-def preview():
-    "Set the variables for the preview environment"
-    set(fab_hosts=["67.23.4.212"])
-    set(fab_user="taylan")
-    set(remote_dir="/home/taylan/sites/fsandassociates/preview")
+    set(remote_dir="/home/taylan/sites/fsandassociates")
 
 
 def deploy(hash="HEAD"):
@@ -31,6 +24,11 @@ def deploy(hash="HEAD"):
     
     # Extract the files from the archive, remove the file
     run("cd $(remote_dir); tar -xzf archive.tar.gz; rm -f archive.tar.gz")
+    
+    # Deploy the new version
+    run("rm -rf $(remote_dir)/live")
+    run("mv $(remote_dir)/deploy/build/static $(remote_dir)/live")
+    run("rm -rf $(remote_dir)/deploy")
 
     # Remove the temporary local directory
     local("rm -rf ../../tmp")
