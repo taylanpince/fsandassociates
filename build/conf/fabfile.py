@@ -1,34 +1,57 @@
-def production():
-    "Set the variables for the production environment"
-    set(fab_hosts=["67.23.4.212"])
-    set(fab_user="taylan")
-    set(remote_dir="/home/taylan/sites/fsandassociates")
+from __future__ import with_statement
+
+from fabric.api import *
+from fabric.contrib.console import confirm
 
 
-def deploy(hash="HEAD"):
-    "Deploy the static site by packaging a specific hash or tag from the git repo"
-    # Make sure that the required variables are here
-    require("fab_hosts", provided_by=[production])
-    require("fab_user", provided_by=[production])
-    require("remote_dir", provided_by=[production])
-    
-    # Set the commit hash (HEAD if not given)
-    set(hash=hash)
-    
+env.remote_dir = "/home/taylan/sites/fsandassociates"
+env.hosts = [
+    "67.23.4.212",
+]
+
+
+def pack(hash="HEAD"):
     # Create a temporary local directory, export the given commit using git archive
-    local("mkdir ../../tmp")
-    local("cd ../../; git archive --format=tar --prefix=deploy/ $(hash) build/static | gzip > tmp/archive.tar.gz")
-    
-    # Upload the archive to the server
-    put("../../tmp/archive.tar.gz", "$(remote_dir)/archive.tar.gz")
-    
-    # Extract the files from the archive, remove the file
-    run("cd $(remote_dir); tar -xzf archive.tar.gz; rm -f archive.tar.gz")
-    
-    # Deploy the new version
-    run("rm -rf $(remote_dir)/live")
-    run("mv $(remote_dir)/deploy/build/static $(remote_dir)/live")
-    run("rm -rf $(remote_dir)/deploy")
+    local("mkdir ../../tmp", capture=False)
+    local("cd ../../ && git archive --format=tar --prefix=deploy/ %s conf build/static build/conf | gzip > tmp/archive.tar.gz" % hash, capture=False)
 
+
+def clean():
     # Remove the temporary local directory
-    local("rm -rf ../../tmp")
+    local("rm -rf ../../tmp", capture=False)
+
+
+def deploy_live():
+    pack()
+    deploy("live")
+    clean()
+
+
+def deploy_preview():
+    pack()
+    deploy("preview")
+    clean()
+
+
+def deploy(environment):
+    # Upload the archive to the server
+    put("../../tmp/archive.tar.gz", "%(remote_dir)s/archive.tar.gz" % env)
+    
+    with cd(env.remote_dir):
+        # Extract the files from the archive, remove the file
+        run("tar -xzf archive.tar.gz")
+        run("rm -f archive.tar.gz")
+        
+        # Remove conf dir
+        run("rm -rf conf")
+        
+        # Move directories out of the build folder and get rid of it
+        run("mv deploy/build/* ./")
+        run("rm -rf deploy")
+        
+        # Remove the active version of the app and move the new one in its place
+        run("rm -rf %s" % environment)
+        run("mv static %s" % environment)
+    
+    # Restart nginx
+    sudo("/etc/init.d/nginx restart")
