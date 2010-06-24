@@ -13,7 +13,7 @@ env.hosts = [
 def pack(hash="HEAD"):
     # Create a temporary local directory, export the given commit using git archive
     local("mkdir ../../tmp", capture=False)
-    local("cd ../../ && git archive --format=tar --prefix=deploy/ %s conf build/static build/conf | gzip > tmp/archive.tar.gz" % hash, capture=False)
+    local("cd ../../ && git archive --format=tar --prefix=deploy/ %s build/static build/conf | gzip > tmp/archive.tar.gz" % hash, capture=False)
 
 
 def clean():
