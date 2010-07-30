@@ -121,7 +121,7 @@ div.columns ul.no-margin {
 #Navigation {
     overflow: hidden;
     position: static;
-    width: 750px;
+    width: 890px;
     padding: 35px 18px 0px 18px;
     margin: 0px auto 0px auto;
 }
@@ -244,6 +244,15 @@ body.events #NavigationContainer {
 }
 
 body.portfolio #NavigationContainer {
+    border-bottom-color: #7d5595;
+}
+
+#Navigation li a.clients {
+    /*color: #7d5595;*/
+    border-bottom-color: #7d5595;
+}
+
+body.clients #NavigationContainer {
     border-bottom-color: #7d5595;
 }
 
