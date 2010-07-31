@@ -190,6 +190,9 @@ ul.photos li {
     background-color: #000;
 }
 
+ul.no-border li {
+    background-color: #FFF;
+}
 
 /* @end */
 
